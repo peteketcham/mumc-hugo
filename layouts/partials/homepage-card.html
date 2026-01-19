@@ -1,0 +1,79 @@
+{{/*
+  Homepage Card Partial
+
+  Renders a single card for the homepage grid.
+  Supports: image, video, or text-only cards with optional links.
+
+  Expected front matter:
+  - image: path to image
+  - image_alt: alt text for image
+  - video: path to video file
+  - video_ogg: optional ogg fallback
+  - video_fallback: YouTube fallback URL
+  - link: optional link URL
+  - external: boolean for external links
+*/}}
+
+{{ $hasImage := .Params.image }}
+{{ $hasVideo := .Params.video }}
+{{ $hasContent := gt (len .Content) 0 }}
+{{ $hasLink := .Params.link }}
+{{ $isExternal := .Params.external }}
+
+<article class="post_type_1{{ if not $hasImage }}{{ if not $hasVideo }} post_type_3{{ end }}{{ end }}">
+    {{/* Image or Video */}}
+    {{ if or $hasImage $hasVideo }}
+    <div class="feature">
+        <div class="image">
+            {{ if $hasVideo }}
+                {{/* Video card */}}
+                <video width="100%" controls preload="metadata"{{ with .Params.video_poster }} poster="{{ . }}"{{ end }}>
+                    <source src="{{ .Params.video }}" type="video/mp4">
+                    {{ with .Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+                    <p>Your browser does not support the video tag.
+                        {{ with .Params.video_fallback }}<a href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
+                    </p>
+                </video>
+            {{ else if $hasLink }}
+                {{/* Image with link */}}
+                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
+                    <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}">
+                    <span class="hover"></span>
+                </a>
+            {{ else }}
+                {{/* Image without link */}}
+                <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}">
+                <span class="hover"></span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    {{/* Content - show if there's body content OR tags */}}
+    {{ $hasTags := .Params.tags }}
+    {{ if or $hasContent $hasTags }}
+    <div class="content">
+        <div class="info">
+            {{ with .Params.tags }}<div class="tags">{{ . }}</div>{{ end }}
+        </div>
+        {{ if $hasContent }}
+        <div class="title">
+            {{ if and $hasLink (not $hasImage) (not $hasVideo) }}
+                {{/* Text-only card with link */}}
+                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
+                    {{ .Content }}
+                </a>
+            {{ else if and $hasLink $hasImage }}
+                {{/* Image card - link wraps content too */}}
+                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
+                    {{ .Content }}
+                </a>
+            {{ else }}
+                {{/* No link - just content */}}
+                {{ .Content }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>

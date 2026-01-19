@@ -1,0 +1,87 @@
+{{ define "main" }}
+<div class="inner">
+    {{/* Page banner image if specified */}}
+    {{ with .Params.banner }}
+    <div class="page-banner">
+        <img src="{{ . }}" alt="{{ $.Params.banner_alt | default $.Title }}">
+    </div>
+    {{ end }}
+
+    {{/* Page title */}}
+    <div class="block_general_title_1 w_margin_1">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+    </div>
+
+    {{/* Featured box if specified */}}
+    {{ with .Params.featured }}
+    <div class="block_featured {{ .position | default "right" }}">
+        <div class="f_title">{{ .title }}</div>
+        <div class="content">
+            {{ with .image }}
+            <div class="image"><img src="{{ . }}" alt="{{ $.Params.featured.image_alt | default "" }}"></div>
+            {{ end }}
+            <div class="description">
+                {{ with .heading }}<div class="title">{{ . }}</div>{{ end }}
+                {{ with .text }}<p>{{ . | safeHTML }}</p>{{ end }}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    {{/* Main content */}}
+    <div class="block_content page-content">
+        {{ .Content }}
+    </div>
+
+    {{/* Video embed if specified */}}
+    {{ with .Params.video }}
+    <div class="page-video">
+        <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . }}"{{ end }}>
+            <source src="{{ . }}" type="video/mp4">
+            {{ with $.Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+            <p>Your browser does not support the video tag.
+                {{ with $.Params.video_fallback }}<a href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
+            </p>
+        </video>
+    </div>
+    {{ end }}
+
+    {{/* Embedded content (Google Sheets, etc.) */}}
+    {{ range .Params.embeds }}
+    <div class="page-embed">
+        {{ with .title }}<h3>{{ . }}</h3>{{ end }}
+        <iframe src="{{ .url }}" width="{{ .width | default "100%" }}" height="{{ .height | default "400" }}" frameborder="0" loading="lazy"></iframe>
+    </div>
+    {{ end }}
+
+    {{/* Downloads section */}}
+    {{ with .Params.downloads }}
+    <div class="page-downloads">
+        <h3>{{ .title | default "Downloads" }}</h3>
+        <ul class="download-list">
+            {{ range .files }}
+            <li>
+                <a href="{{ .url }}" target="_blank" rel="noopener">
+                    <span class="download-icon">📄</span>
+                    {{ .name }}
+                </a>
+                {{ with .description }}<p>{{ . }}</p>{{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    {{/* Location link */}}
+    {{ with .Params.location_link }}
+    <div class="page-location">
+        <a href="{{ . }}" target="_blank" rel="noopener">
+            <strong>WHERE EXACTLY ARE WE?</strong> At 3701 E. 50th Street in South Minneapolis. Click here to see a Google map.
+        </a>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
