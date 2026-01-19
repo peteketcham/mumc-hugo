@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    <meta name="keywords" content="minnehaha united methodist, methodist church minneapolis, progressive church minneapolis, LGBTQIA+ church minneapolis, inclusive church minneapolis, south minneapolis church, reconciling methodist church minneapolis, welcoming">
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/layout/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" integrity="sha256-dMpqrlRo28kkeQw7TSGaCJuQo0utU6D3yjpz5ztvWrg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/layout/plugins/cssanimation/animate.css">
+    <link rel="stylesheet" href="/layout/plugins/cssanimation/delays.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body class="sticky_footer">
+    <a href="#content" class="skip-link">Skip to main content</a>
+
+    <div class="wrapper">
+        {{ partial "header.html" . }}
+
+        <main id="content" role="main">
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        {{ partial "footer.html" . }}
+    </div>
+
+    <!-- Scripts at end of body for better performance -->
+    <script>
+        // Mobile detection (from plugins.js)
+        var isMobile = false;
+        var isiPad = false;
+        (function() {
+            var mobileIds = ['iphone', 'android', 'ipad', 'ipod'];
+            var ua = navigator.userAgent.toLowerCase();
+            for (var i = 0; i < mobileIds.length; i++) {
+                if (ua.indexOf(mobileIds[i]) > -1) {
+                    isMobile = true;
+                    if (mobileIds[i] === 'ipad') isiPad = true;
+                }
+            }
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha256-mF8SJMDu7JnTZ6nbNeWORLIefrnORYMbFbTBCOQf2X8=" crossorigin="anonymous"></script>
+    <script src="/layout/js/main.js"></script>
+</body>
+</html>

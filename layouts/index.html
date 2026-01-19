@@ -1,0 +1,63 @@
+{{ define "main" }}
+<div class="inner">
+    <!-- Image Slider (Swiper.js) -->
+    <div class="block_slider_type_1">
+        <div id="homepage-slider" class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/1Across our nation v2.jpg" alt="Across our nation, across the street - we're your neighborhood church">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/3Power unexamined v2.jpg" alt="Power unexamined is power misused">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/2Fragile space v2.jpg" alt="This is fragile space">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Pic-slider-good-things-happen-here.jpg" alt="We're your neighborhood church - Good things happen here">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/puzzle-top-22.jpg" alt="All are welcome - we're all part of the same puzzle">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/slider-4food-ministries.jpg" alt="We have four food ministries fighting hunger in our community">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Black-Lives-Matter-Banner-header.jpg" alt="Black Lives Matter - we stand for racial justice">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/Solar Powered_picslider.jpg" alt="We're solar powered - committed to sustainability">
+                </div>
+            </div>
+            <!-- Navigation arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <!-- Church Title and Address -->
+    <div class="block_general_title_1 w_margin_1">
+        <h1>Minnehaha United Methodist Church</h1>
+        <a href="https://www.google.com/maps/place/Minnehaha+United+Methodist+Church/@44.9122631,-93.2207999,17z/data=!3m1!4b1!4m5!3m4!1s0x87f628fdfa9d5cbf:0x1e01a06ebc6f8804!8m2!3d44.9122593!4d-93.2186059" target="_blank" rel="noopener">
+            <h3>3701 East 50th Street, Minneapolis, MN 55417 </h3>
+        </a>
+        <h3>&bull; 612.721.6231 &bull; <a href="mailto:office@minnehaha.org">office@minnehaha.org</a></h3>
+    </div>
+
+    <!-- Homepage Cards - loaded from /content/homepage/ -->
+    <div class="block_posts type_1 type_sort">
+        <div class="posts">
+            {{/* Get all non-archived, non-draft homepage cards, sorted by weight */}}
+            {{ $section := .Site.GetPage "section" "homepage" }}
+            {{ if $section }}
+                {{ $cards := where $section.Pages "Params.archived" "!=" true }}
+                {{ range $cards.ByWeight }}
+                    {{ partial "homepage-card.html" . }}
+                {{ end }}
+            {{ else }}
+                <!-- No homepage section found -->
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

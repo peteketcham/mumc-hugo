@@ -1,0 +1,57 @@
+{{ define "main" }}
+<div class="inner">
+    {{/* Page title */}}
+    <div class="block_general_title_1 w_margin_1">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+    </div>
+
+    {{/* Intro text */}}
+    {{ with .Params.intro }}
+    <div class="page-intro">
+        <p>{{ . }}</p>
+    </div>
+    {{ end }}
+
+    {{/* Staff grid */}}
+    <div class="block_posts type_1 type_sort">
+        <div class="posts staff-grid">
+            {{ range .Params.staff }}
+            <article class="post_type_1 staff-card">
+                <div class="feature">
+                    <div class="image">
+                        {{ with .photo }}
+                        <img src="{{ . }}" alt="{{ $.Params.name }}">
+                        {{ else }}
+                        <img src="/images/placeholder-staff.jpg" alt="{{ .name }}">
+                        {{ end }}
+                        <span class="hover"></span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="title">
+                        <span class="staff-name">{{ .title | default .name }}</span>
+                        {{ with .bio }}{{ . | safeHTML }}{{ end }}
+                    </div>
+                    {{ with .email }}
+                    <div class="staff-email">
+                        <a href="mailto:{{ . }}">{{ . }}</a>
+                    </div>
+                    {{ end }}
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+
+    {{/* Additional content from markdown */}}
+    {{ with .Content }}
+    <div class="block_content page-content">
+        {{ . }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}

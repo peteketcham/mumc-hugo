@@ -1,0 +1,95 @@
+{{ define "main" }}
+<div class="inner">
+    {{/* Page title and contact info header */}}
+    <div class="block_general_title_1 w_margin_1">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+    </div>
+
+    <div class="contact-page-layout">
+        {{/* Contact info sidebar */}}
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <address>
+                <p>
+                    <strong>{{ .Site.Title }}</strong><br>
+                    {{ .Site.Params.address }}
+                </p>
+                <p>
+                    <a href="tel:{{ .Site.Params.phone | replaceRE "[^0-9]" "" }}">{{ .Site.Params.phone }}</a>
+                </p>
+                <p>
+                    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+                </p>
+            </address>
+
+            {{ with .Params.office_hours }}
+            <h3>Office Hours</h3>
+            <p>{{ . | safeHTML }}</p>
+            {{ end }}
+
+            {{/* Staff directory */}}
+            {{ with .Params.staff_contacts }}
+            <h3>Our Staff</h3>
+            {{ with $.Params.staff_photo }}
+            <div class="staff-photo-preview">
+                <a href="/staff/">
+                    <img src="{{ . }}" alt="Minnehaha UMC Staff">
+                </a>
+                <p><a href="/staff/">Learn more about our staff →</a></p>
+            </div>
+            {{ end }}
+            <ul class="staff-contact-list">
+                {{ range . }}
+                <li>
+                    <strong>{{ .name }}</strong>{{ with .role }}, {{ . }}{{ end }}<br>
+                    {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+
+        {{/* Contact form */}}
+        <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <p>If you have a question or would like some information about Minnehaha United Methodist Church, just fill out the form and click the "Send Message" button.</p>
+
+            <form action="https://formspree.io/f/{{ .Params.formspree_id | default "placeholder" }}" method="POST" class="contact-form" id="contact_form">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="general_button_type_3">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{/* Additional content from markdown */}}
+    {{ with .Content }}
+    <div class="block_content page-content">
+        {{ . }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}

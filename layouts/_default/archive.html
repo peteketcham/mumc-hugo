@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="inner">
+    <div class="block_general_title_1 w_margin_1">
+        <h1>{{ .Title }}</h1>
+    </div>
+
+    <div class="archive-intro">
+        {{ .Content }}
+    </div>
+
+    <!-- Archived Homepage Cards -->
+    <div class="block_posts type_1 type_sort general_not_loaded">
+        <div class="posts">
+            {{/* Get all archived homepage cards, sorted by weight */}}
+            {{ $section := .Site.GetPage "section" "homepage" }}
+            {{ if $section }}
+                {{ $cards := where $section.Pages "Params.archived" true }}
+                {{ if $cards }}
+                    {{ range $cards.ByWeight }}
+                        {{ partial "homepage-card.html" . }}
+                    {{ end }}
+                {{ else }}
+                    <p>No archived announcements at this time.</p>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,97 @@
+baseURL = 'https://minnehaha.org/'
+languageCode = 'en-us'
+title = 'Minnehaha United Methodist Church'
+enableRobotsTXT = true
+
+# Disable taxonomies (not used for this site)
+disableKinds = ['taxonomy', 'term']
+
+# Allow raw HTML in markdown files
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Minnehaha United Methodist Church - Your neighborhood church in Minneapolis"
+  address = "3701 East 50th Street, Minneapolis, MN 55417"
+  phone = "612.721.6231"
+  email = "office@minnehaha.org"
+  facebook = "https://www.facebook.com/MinnehahaUMC"
+  instagram = "https://www.instagram.com/minnehahaumc"
+  youtube = "https://www.youtube.com/@minnehahaumc"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Calendar"
+    url = "/calendar"
+    weight = 2
+  [[menu.main]]
+    name = "Kids/Youth"
+    url = "/kids-youth"
+    weight = 3
+  [[menu.main]]
+    name = "Climate"
+    url = "/climate"
+    weight = 4
+  [[menu.main]]
+    name = "Groups"
+    url = "/groups"
+    weight = 5
+  [[menu.main]]
+    name = "Food Missions"
+    url = "/food-missions"
+    weight = 6
+  [[menu.main]]
+    name = "Bldg. Use"
+    url = "/building-use"
+    weight = 7
+  [[menu.main]]
+    name = "Wedding/Funeral"
+    url = "/wedding-funeral"
+    weight = 8
+  [[menu.main]]
+    name = "Forms"
+    url = "/forms"
+    weight = 9
+  [[menu.main]]
+    name = "FAQs"
+    url = "/faqs"
+    weight = 10
+
+  [[menu.secondary]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.secondary]]
+    name = "Welcome"
+    url = "/welcome"
+    weight = 2
+  [[menu.secondary]]
+    name = "First Visit"
+    url = "/first-visit"
+    weight = 3
+  [[menu.secondary]]
+    name = "We Seek"
+    url = "/we-seek"
+    weight = 4
+  [[menu.secondary]]
+    name = "We Serve"
+    url = "/we-serve"
+    weight = 5
+  [[menu.secondary]]
+    name = "We Celebrate"
+    url = "/we-celebrate"
+    weight = 6
+  [[menu.secondary]]
+    name = "Staff"
+    url = "/staff"
+    weight = 7
+  [[menu.secondary]]
+    name = "Contact Us"
+    url = "/contact"
+    weight = 8

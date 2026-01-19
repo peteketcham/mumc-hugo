@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="inner">
+    {{/* Banner image if specified (for pages like youth with header image) */}}
+    {{ with .Params.banner }}
+    <div class="page-banner">
+        <img src="{{ . }}" alt="{{ $.Params.banner_alt | default $.Title }}">
+    </div>
+    {{ end }}
+
+    {{/* Video header if specified */}}
+    {{ with .Params.video }}
+    <div class="section-video">
+        <article class="post_type_1">
+            <div class="feature">
+                <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . }}"{{ end }}>
+                    <source src="{{ . }}" type="video/mp4">
+                    {{ with $.Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </div>
+        </article>
+    </div>
+    {{ end }}
+
+    {{/* Section Title and Subtitle */}}
+    <div class="block_general_title_1 w_margin_1">
+        <h2><a>{{ .Title }}</a></h2>
+        {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+    </div>
+
+    {{/* Section intro content from _index.md */}}
+    {{ with .Content }}
+    <div class="block_content section-intro">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    {{/* Section Cards - loaded from child pages */}}
+    <div class="block_posts type_1 type_sort">
+        <div class="posts">
+            {{/* Get all non-archived, non-draft cards in this section, sorted by weight */}}
+            {{ $cards := where .Pages "Params.archived" "!=" true }}
+            {{ range $cards.ByWeight }}
+                {{ partial "homepage-card.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
