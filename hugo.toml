@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Minnehaha United Methodist Church'
 enableRobotsTXT = true
 
+# For GitHub Pages
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 # Disable taxonomies (not used for this site)
 disableKinds = ['taxonomy', 'term']
 
