@@ -1,4 +1,5 @@
-baseURL = 'https://minnehaha.org/'
+# baseURL = 'https://minnehaha.org/'
+baseURL = 'https://www.peteketcham.com/mumc-hugo/'
 languageCode = 'en-us'
 title = 'Minnehaha United Methodist Church'
 enableRobotsTXT = true
