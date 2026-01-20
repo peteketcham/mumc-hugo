@@ -9,18 +9,18 @@
     <meta name="keywords" content="minnehaha united methodist, methodist church minneapolis, progressive church minneapolis, LGBTQIA+ church minneapolis, inclusive church minneapolis, south minneapolis church, reconciling methodist church minneapolis, welcoming">
     <meta name="description" content="{{ .Site.Params.description }}">
 
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="{{ "/favicon.ico" | relURL }}">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/layout/style.css">
+    <link rel="stylesheet" href="{{ "/layout/style.css" | relURL }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" integrity="sha256-dMpqrlRo28kkeQw7TSGaCJuQo0utU6D3yjpz5ztvWrg=" crossorigin="anonymous">
-    <link rel="stylesheet" href="/layout/plugins/cssanimation/animate.css">
-    <link rel="stylesheet" href="/layout/plugins/cssanimation/delays.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="{{ "/layout/plugins/cssanimation/animate.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "/layout/plugins/cssanimation/delays.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
 </head>
 
 <body class="sticky_footer">
-    <a href="#content" class="skip-link">Skip to main content</a>
+    <a href="{{ "#content" | relURL }}" class="skip-link">Skip to main content</a>
 
     <div class="wrapper">
         {{ partial "header.html" . }}
@@ -50,6 +50,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha256-mF8SJMDu7JnTZ6nbNeWORLIefrnORYMbFbTBCOQf2X8=" crossorigin="anonymous"></script>
-    <script src="/layout/js/main.js"></script>
+    <script src="{{ "/layout/js/main.js" | relURL }}"></script>
 </body>
 </html>

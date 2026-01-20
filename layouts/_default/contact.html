@@ -35,10 +35,10 @@
             <h3>Our Staff</h3>
             {{ with $.Params.staff_photo }}
             <div class="staff-photo-preview">
-                <a href="/staff/">
-                    <img src="{{ . }}" alt="Minnehaha UMC Staff">
+                <a href="{{ "/staff/" | relURL }}">
+                    <img src="{{ . | relURL }}" alt="Minnehaha UMC Staff">
                 </a>
-                <p><a href="/staff/">Learn more about our staff →</a></p>
+                <p><a href="{{ "/staff/" | relURL }}">Learn more about our staff →</a></p>
             </div>
             {{ end }}
             <ul class="staff-contact-list">

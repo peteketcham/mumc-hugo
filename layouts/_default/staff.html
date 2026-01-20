@@ -23,9 +23,9 @@
                 <div class="feature">
                     <div class="image">
                         {{ with .photo }}
-                        <img src="{{ . }}" alt="{{ $.Params.name }}">
+                        <img src="{{ . | relURL }}" alt="{{ $.Params.name }}">
                         {{ else }}
-                        <img src="/images/placeholder-staff.jpg" alt="{{ .name }}">
+                        <img src="{{ "/images/placeholder-staff.jpg" | relURL }}" alt="{{ .name }}">
                         {{ end }}
                         <span class="hover"></span>
                     </div>

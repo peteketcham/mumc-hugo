@@ -3,7 +3,7 @@
     {{/* Banner image if specified (for pages like youth with header image) */}}
     {{ with .Params.banner }}
     <div class="page-banner">
-        <img src="{{ . }}" alt="{{ $.Params.banner_alt | default $.Title }}">
+        <img src="{{ . | relURL }}" alt="{{ $.Params.banner_alt | default $.Title }}">
     </div>
     {{ end }}
 
@@ -12,9 +12,9 @@
     <div class="section-video">
         <article class="post_type_1">
             <div class="feature">
-                <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . }}"{{ end }}>
-                    <source src="{{ . }}" type="video/mp4">
-                    {{ with $.Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+                <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . | relURL }}"{{ end }}>
+                    <source src="{{ . | relURL }}" type="video/mp4">
+                    {{ with $.Params.video_ogg }}<source src="{{ . | relURL }}" type="video/ogg">{{ end }}
                     <p>Your browser does not support the video tag.</p>
                 </video>
             </div>

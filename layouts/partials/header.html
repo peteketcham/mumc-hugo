@@ -5,54 +5,54 @@
                 <div class="block_top_menu">
                     <nav aria-label="Primary navigation">
                         <ul>
-                            <li class="current_page_item"><a href="/">HOME</a></li>
-                            <li><a href="/calendar/">CALENDAR</a></li>
+                            <li class="current_page_item"><a href="{{ "/" | relURL }}">HOME</a></li>
+                            <li><a href="{{ "/calendar/" | relURL }}">CALENDAR</a></li>
                             <li><a href="#">KIDS/YOUTH</a>
                                 <ul>
-                                    <li><a href="/kids/">Kids</a></li>
-                                    <li><a href="/youth/">Youth</a></li>
+                                    <li><a href="{{ "/kids/" | relURL }}">Kids</a></li>
+                                    <li><a href="{{ "/youth/" | relURL }}">Youth</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">CLIMATE</a>
                                 <ul>
-                                    <li><a href="/solar/">Solar Power</a></li>
-                                    <li><a href="/climate-action/">Climate Action</a></li>
+                                    <li><a href="{{ "/solar/" | relURL }}">Solar Power</a></li>
+                                    <li><a href="{{ "/climate-action/" | relURL }}">Climate Action</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/groups/">GROUPS</a>
+                            <li><a href="{{ "/groups/" | relURL }}">GROUPS</a>
                                 <ul>
-                                    <li><a href="/racial-justice/">Racial Justice</a></li>
-                                    <li><a href="/uwf/">United Women in Faith</a></li>
+                                    <li><a href="{{ "/racial-justice/" | relURL }}">Racial Justice</a></li>
+                                    <li><a href="{{ "/uwf/" | relURL }}">United Women in Faith</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">FOOD MISSIONS</a>
                                 <ul>
-                                    <li><a href="/food-shelf/">Food Shelf</a></li>
-                                    <li><a href="/food-ministries/">3 Food Missions</a></li>
+                                    <li><a href="{{ "/food-shelf/" | relURL }}">Food Shelf</a></li>
+                                    <li><a href="{{ "/food-ministries/" | relURL }}">3 Food Missions</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">BLDG. USE</a>
                                 <ul>
-                                    <li><a href="/building/">Work Orders, Building &amp; Kitchen</a></li>
-                                    <li><a href="/documents/majorcleanupchecklist.pdf">Major Event Cleanup Checklist</a></li>
-                                    <li><a href="/documents/groupcleanupchecklist.pdf">Group Cleanup Checklist</a></li>
-                                    <li><a href="/documents/MUMC Room Rental.pdf">Room Rentals</a></li>
+                                    <li><a href="{{ "/building/" | relURL }}">Work Orders, Building &amp; Kitchen</a></li>
+                                    <li><a href="{{ "/documents/majorcleanupchecklist.pdf" | relURL }}">Major Event Cleanup Checklist</a></li>
+                                    <li><a href="{{ "/documents/groupcleanupchecklist.pdf" | relURL }}">Group Cleanup Checklist</a></li>
+                                    <li><a href="{{ "/documents/MUMC Room Rental.pdf" | relURL }}">Room Rentals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/weddings-funerals/">WEDDING/FUNERAL</a></li>
+                            <li><a href="{{ "/weddings-funerals/" | relURL }}">WEDDING/FUNERAL</a></li>
                             <li><a href="#">FORMS</a>
                                 <ul>
-                                    <li><a href="/documents/eventmediaform.pdf">Event Media Form</a></li>
-                                    <li><a href="/documents/MUMC_Claim_Form.pdf">Claim Form</a></li>
-                                    <li><a href="/documents/Gym Rules and Liability Waiver.pdf">Gym Rules &amp; Liability Waiver</a></li>
+                                    <li><a href="{{ "/documents/eventmediaform.pdf" | relURL }}">Event Media Form</a></li>
+                                    <li><a href="{{ "/documents/MUMC_Claim_Form.pdf" | relURL }}">Claim Form</a></li>
+                                    <li><a href="{{ "/documents/Gym Rules and Liability Waiver.pdf" | relURL }}">Gym Rules &amp; Liability Waiver</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">FAQs</a>
                                 <ul>
-                                    <li><a href="/good-things-happen-here/">Good Things Happen Here</a></li>
-                                    <li><a href="/documents/QandA.pdf">Questions? Answers!</a></li>
-                                    <li><a href="/documents/whointhechurch.pdf">Who Do I Talk To?</a></li>
-                                    <li><a href="/slideshow/">Church history</a></li>
+                                    <li><a href="{{ "/good-things-happen-here/" | relURL }}">Good Things Happen Here</a></li>
+                                    <li><a href="{{ "/documents/QandA.pdf" | relURL }}">Questions? Answers!</a></li>
+                                    <li><a href="{{ "/documents/whointhechurch.pdf" | relURL }}">Who Do I Talk To?</a></li>
+                                    <li><a href="{{ "/slideshow/" | relURL }}">Church history</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -73,8 +73,8 @@
         <section class="middle">
             <div class="inner">
                 <div id="logo_top">
-                    <a href="/" aria-label="Minnehaha United Methodist Church - Home">
-                        <img src="/images/logo_top.png" alt="MUMC - Minnehaha United Methodist Church" title="MUMC">
+                    <a href="{{ "/" | relURL }}" aria-label="Minnehaha United Methodist Church - Home">
+                        <img src="{{ "/images/logo_top.png" | relURL }}" alt="MUMC - Minnehaha United Methodist Church" title="MUMC">
                     </a>
                 </div>
             </div>
@@ -85,16 +85,16 @@
                 <div class="block_secondary_menu">
                     <nav aria-label="Secondary navigation">
                         <ul>
-                            <li data-content="homepage"><a href="/">HOME</a></li>
-                            <li data-content="welcome"><a href="/welcome/">WELCOME</a></li>
-                            <li data-content="first visit"><a href="/first-visit/">FIRST VISIT</a>
+                            <li data-content="homepage"><a href="{{ "/" | relURL }}">HOME</a></li>
+                            <li data-content="welcome"><a href="{{ "/welcome/" | relURL }}">WELCOME</a></li>
+                            <li data-content="first visit"><a href="{{ "/first-visit/" | relURL }}">FIRST VISIT</a>
                                 <div class="tail"></div>
                             </li>
-                            <li data-content="seek"><a href="/we-seek/">WE SEEK</a></li>
-                            <li data-content="serve"><a href="/we-serve/">WE SERVE</a></li>
-                            <li data-content="celebrate"><a href="/we-celebrate/">WE CELEBRATE</a></li>
-                            <li data-content="staff"><a href="/staff/">STAFF</a></li>
-                            <li data-content="contact"><a href="/contact/">CONTACT US</a></li>
+                            <li data-content="seek"><a href="{{ "/we-seek/" | relURL }}">WE SEEK</a></li>
+                            <li data-content="serve"><a href="{{ "/we-serve/" | relURL }}">WE SERVE</a></li>
+                            <li data-content="celebrate"><a href="{{ "/we-celebrate/" | relURL }}">WE CELEBRATE</a></li>
+                            <li data-content="staff"><a href="{{ "/staff/" | relURL }}">STAFF</a></li>
+                            <li data-content="contact"><a href="{{ "/contact/" | relURL }}">CONTACT US</a></li>
                         </ul>
                     </nav>
                 </div>

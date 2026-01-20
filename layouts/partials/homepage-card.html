@@ -27,22 +27,22 @@
         <div class="image">
             {{ if $hasVideo }}
                 {{/* Video card */}}
-                <video width="100%" controls preload="metadata"{{ with .Params.video_poster }} poster="{{ . }}"{{ end }}>
-                    <source src="{{ .Params.video }}" type="video/mp4">
-                    {{ with .Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+                <video width="100%" controls preload="metadata"{{ with .Params.video_poster }} poster="{{ . | relURL }}"{{ end }}>
+                    <source src="{{ .Params.video | relURL }}" type="video/mp4">
+                    {{ with .Params.video_ogg }}<source src="{{ . | relURL }}" type="video/ogg">{{ end }}
                     <p>Your browser does not support the video tag.
                         {{ with .Params.video_fallback }}<a href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
                     </p>
                 </video>
             {{ else if $hasLink }}
                 {{/* Image with link */}}
-                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
-                    <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}">
+                <a href="{{ if .Params.external }}{{ .Params.link }}{{ else }}{{ .Params.link | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}">
                     <span class="hover"></span>
                 </a>
             {{ else }}
                 {{/* Image without link */}}
-                <img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}">
                 <span class="hover"></span>
             {{ end }}
         </div>

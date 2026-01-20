@@ -3,7 +3,7 @@
     {{/* Page banner image if specified */}}
     {{ with .Params.banner }}
     <div class="page-banner">
-        <img src="{{ . }}" alt="{{ $.Params.banner_alt | default $.Title }}">
+        <img src="{{ . | relURL }}" alt="{{ $.Params.banner_alt | default $.Title }}">
     </div>
     {{ end }}
 
@@ -21,7 +21,7 @@
         <div class="f_title">{{ .title }}</div>
         <div class="content">
             {{ with .image }}
-            <div class="image"><img src="{{ . }}" alt="{{ $.Params.featured.image_alt | default "" }}"></div>
+            <div class="image"><img src="{{ . | relURL }}" alt="{{ $.Params.featured.image_alt | default "" }}"></div>
             {{ end }}
             <div class="description">
                 {{ with .heading }}<div class="title">{{ . }}</div>{{ end }}
@@ -39,9 +39,9 @@
     {{/* Video embed if specified */}}
     {{ with .Params.video }}
     <div class="page-video">
-        <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . }}"{{ end }}>
-            <source src="{{ . }}" type="video/mp4">
-            {{ with $.Params.video_ogg }}<source src="{{ . }}" type="video/ogg">{{ end }}
+        <video width="100%" controls preload="metadata"{{ with $.Params.video_poster }} poster="{{ . | relURL }}"{{ end }}>
+            <source src="{{ . | relURL }}" type="video/mp4">
+            {{ with $.Params.video_ogg }}<source src="{{ . | relURL }}" type="video/ogg">{{ end }}
             <p>Your browser does not support the video tag.
                 {{ with $.Params.video_fallback }}<a href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
             </p>
@@ -64,7 +64,7 @@
         <ul class="download-list">
             {{ range .files }}
             <li>
-                <a href="{{ .url }}" target="_blank" rel="noopener">
+                <a href="{{ .url | relURL }}" target="_blank" rel="noopener">
                     <span class="download-icon">📄</span>
                     {{ .name }}
                 </a>
