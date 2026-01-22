@@ -218,6 +218,66 @@ For content changes only (no code), see [docs/CONTENT-MANAGEMENT.md](docs/CONTEN
 | Jan 2026 | Replaced Flexslider with Swiper.js |
 | Jan 2026 | Replaced Isotope with CSS Grid |
 | Jan 2026 | Added content management documentation |
+| Jan 2026 | Added kids/ and youth/ card-based sections |
+| Jan 2026 | Fixed subdirectory deployment (relURL) |
+| Jan 2026 | Created calendar page |
+
+---
+
+## Session Log (Jan 19, 2026)
+
+### Completed Tasks
+
+1. **Added image captions on kids/youth pages**
+   - Modified `layouts/partials/homepage-card.html` to show tags even for image-only cards
+   - Changed condition from `{{ if $hasContent }}` to `{{ if or $hasContent $hasTags }}`
+
+2. **Fixed contact page SEND MESSAGE button styling**
+   - Updated button CSS in `static/css/custom.css` to match original site's `general_button_type_3`
+
+3. **Created calendar page**
+   - Added `content/calendar.md` with embedded Google Calendar iframe
+   - Added responsive CSS for `.responsiveCal` in `custom.css`
+
+4. **Fixed subdirectory deployment paths**
+   - Site is hosted at `https://www.peteketcham.com/mumc-hugo/`
+   - Updated ALL templates to use `| relURL` for paths (images, CSS, JS, links)
+   - Files updated:
+     - `layouts/_default/baseof.html` - favicon, CSS, JS
+     - `layouts/partials/header.html` - all nav links, logo
+     - `layouts/partials/footer.html` - quick links
+     - `layouts/index.html` - slider images
+     - `layouts/partials/homepage-card.html` - card images/videos/links
+     - `layouts/_default/single.html` - banner, featured, video, downloads
+     - `layouts/_default/section-with-cards.html` - banner, video
+     - `layouts/_default/staff.html` - staff photos
+     - `layouts/_default/contact.html` - staff photo/links
+
+5. **Fixed GitHub Actions baseURL override**
+   - `.github/workflows/hugo.yaml` was overriding `hugo.toml` baseURL with `${{ steps.pages.outputs.base_url }}`
+   - Removed the `--baseURL` flag so Hugo uses `hugo.toml` setting
+
+### Pending Verification
+
+After `git push`:
+- [ ] Verify GitHub Actions build succeeds
+- [ ] Verify all images load on deployed site
+- [ ] Verify all CSS/JS loads (no 404s in console)
+- [ ] Verify navigation links work (include `/mumc-hugo/` prefix)
+- [ ] Test kids and youth pages show captions under images
+
+### Key Configuration
+
+```toml
+# hugo.toml
+baseURL = 'https://www.peteketcham.com/mumc-hugo/'
+```
+
+### Important Notes
+
+- **Subdirectory Deployment**: When hosting Hugo in a subdirectory, ALL paths in templates must use `| relURL` to prepend the base path
+- **GitHub Actions**: Don't override baseURL in workflow if hugo.toml has correct setting
+- **Cloudflare Errors**: CSP warnings from Google Calendar iframe are normal; Cloudflare beacon errors are from hosting config, not Hugo
 
 ---
 
