@@ -3,7 +3,7 @@ title: "Church History"
 weight: 250
 draft: false
 archived: false
-image: "/images/MUMC-History.jpg"
+image: "/images/mumc-history.jpg"
 image_alt: "Our Church History - A Slideshow"
 link: "https://youtu.be/e1qPotnfwVo"
 external: true

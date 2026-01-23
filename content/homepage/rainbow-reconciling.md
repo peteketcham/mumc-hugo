@@ -3,7 +3,7 @@ title: "Reconciling Congregation"
 weight: 210
 draft: false
 archived: false
-image: "/images/m logo rainbow.png"
+image: "/images/m-logo-rainbow.png"
 image_alt: "Minnehaha United Methodist Church welcomes everyone from the LGBTQ+ community"
 ---
 

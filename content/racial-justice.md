@@ -1,7 +1,7 @@
 ---
 title: "Racial Justice at Minnehaha United Methodist Church"
 description: "We are called by our Christian faith to love our neighbor and work for justice."
-banner: "/images/Black-Lives-Matter-Banner-header.jpg"
+banner: "/images/black-lives-matter-banner-header.jpg"
 banner_alt: "Black Lives Matter banner"
 downloads:
   title: "Resources"

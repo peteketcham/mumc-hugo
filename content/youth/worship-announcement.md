@@ -3,7 +3,7 @@ title: "Join Us For Worship"
 weight: 10
 draft: false
 archived: false
-image: "/images/SUMMER-2022-WORSHIP.jpg"
+image: "/images/summer-2022-worship.jpg"
 image_alt: "Join us for worship"
 ---
 

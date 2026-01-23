@@ -3,7 +3,7 @@ title: "George Floyd Memorial"
 weight: 190
 draft: false
 archived: false
-image: "/images/4George.jpg"
+image: "/images/4george.jpg"
 image_alt: "George Floyd Memorial"
 ---
 

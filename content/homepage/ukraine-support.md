@@ -3,7 +3,7 @@ title: "Ukraine Support"
 weight: 130
 draft: false
 archived: false
-image: "/images/Aid-for-Ukraine.jpg"
+image: "/images/aid-for-ukraine.jpg"
 image_alt: "Support Ukraine through UMCOR"
 link: "https://umcmission.org/umcor/"
 external: true

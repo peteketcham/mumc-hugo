@@ -3,7 +3,7 @@ title: "Young Family Sunday School"
 weight: 200
 draft: true
 archived: false
-image: "/images/youngfamilysundayschool.jpg"
+image: "/images/young-family-sunday-school.jpg"
 image_alt: "Young Family Sunday School"
 ---
 

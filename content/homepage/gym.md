@@ -3,7 +3,7 @@ title: "Church Gym"
 weight: 240
 draft: false
 archived: false
-image: "/images/MUMC Gym.jpg"
+image: "/images/mumc-gym.jpg"
 image_alt: "We have a gym inside the church that you can use"
 ---
 

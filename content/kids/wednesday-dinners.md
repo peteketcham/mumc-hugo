@@ -3,7 +3,7 @@ title: "Wednesday Night Suppers"
 weight: 290
 draft: true
 archived: false
-image: "/images/wed_night_supper.jpg"
+image: "/images/wed-night-supper.jpg"
 image_alt: "Wednesday Night Suppers"
 ---
 

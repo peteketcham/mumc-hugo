@@ -3,7 +3,7 @@ title: "Young Families Dinner"
 weight: 220
 draft: true
 archived: false
-image: "/images/familymeal.jpg"
+image: "/images/family-meal.jpg"
 image_alt: "Minnehaha Young Families Dinner"
 ---
 

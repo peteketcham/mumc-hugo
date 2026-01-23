@@ -3,7 +3,7 @@ title: "Summer Camp Registration"
 weight: 240
 draft: true
 archived: false
-image: "/images/2022-Summer-Camp-Registration.jpg"
+image: "/images/2022-summer-camp-registration.jpg"
 image_alt: "Summer Camp Registration"
 ---
 

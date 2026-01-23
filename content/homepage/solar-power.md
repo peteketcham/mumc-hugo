@@ -3,7 +3,7 @@ title: "Solar Power"
 weight: 300
 draft: false
 archived: false
-image: "/images/solar power update.jpg"
+image: "/images/solar-power-update.jpg"
 image_alt: "Today's solar power update"
 link: "/solar/"
 external: false

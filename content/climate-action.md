@@ -1,7 +1,7 @@
 ---
 title: "Climate Action at Minnehaha United Methodist Church"
 description: "At Minnehaha United Methodist Church, we're committed to a sustainable, climate-friendly future. Join us."
-banner: "/images/MUMC_solar_wide.jpg"
+banner: "/images/mumc-solar-wide.jpg"
 banner_alt: "Solar panels on Minnehaha UMC"
 ---
 

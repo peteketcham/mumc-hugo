@@ -1,8 +1,8 @@
 ---
 title: "Welcome to Minnehaha UMC"
 description: "Welcome to Minnehaha UMC, located in south Minneapolis. Our pastor is Becky Sechrist. We'd love to have you join us for worship and fellowship."
-video: "/images/BeckyWelcomeTab.mp4"
-video_ogg: "/images/BeckyWelcomeTab.ogg"
+video: "/images/becky-welcome-tab.mp4"
+video_ogg: "/images/becky-welcome-tab.ogg"
 video_fallback: "https://www.youtube.com/watch?v=5_AW9mDExZ0"
 featured:
   title: "OPEN HEARTS. OPEN MINDS. OPEN DOORS."

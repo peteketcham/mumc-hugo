@@ -3,7 +3,7 @@ title: "Building Community"
 weight: 230
 draft: false
 archived: false
-image: "/images/Building-Community.jpg"
+image: "/images/building-community.jpg"
 image_alt: "Minnehaha UMC: A progressive, inclusive, affirming church in South Minneapolis."
 link: "https://youtu.be/ZnigS3C7tRQ"
 external: true

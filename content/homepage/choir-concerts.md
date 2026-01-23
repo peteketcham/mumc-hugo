@@ -3,7 +3,7 @@ title: "Choir Concerts"
 weight: 70
 draft: false
 archived: false
-image: "/images/Minneapolis-Choir-Collective_sm.jpg"
+image: "/images/minneapolis-choir-collective-sm.jpg"
 image_alt: "2 concerts to benefit Minnehaha Food Shelf February 13 and 14 at 7:00 p.m."
 link: "https://minneapolischoircollective.com/buytickets"
 external: true

@@ -3,7 +3,7 @@ title: "Food Shelf"
 weight: 120
 draft: false
 archived: false
-image: "/images/foodshelflogo.jpg"
+image: "/images/food-shelf-logo.jpg"
 image_alt: "Support the Minnehaha Food Shelf in Minneapolis"
 link: "/food-shelf/"
 external: false

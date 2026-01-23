@@ -1,7 +1,7 @@
 ---
 title: "United Women of Faith at Minnehaha UMC"
 description: "United Women of Faith (UWF) at Minnehaha United Methodist Church welcomes women of any age or interest to grow in spirit and support missions in the neighborhood and around the world."
-banner: "/images/UWF_Logo-w-Text-and-Quote.jpg"
+banner: "/images/uwf-logo-w-text-and-quote.jpg"
 banner_alt: "United Women of Faith logo"
 ---
 

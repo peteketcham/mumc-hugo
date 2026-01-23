@@ -1,7 +1,7 @@
 ---
 title: "Your First Visit to Minnehaha UMC"
 description: "Your first time going to Minnehaha? Here's what to expect once you walk through the doors – including how to find us, deal with ushers and make it through the sermon."
-banner: "/images/streetsign_MASTER.jpg"
+banner: "/images/streetsign-master.jpg"
 banner_alt: "Street sign showing the way to Minnehaha UMC"
 featured:
   title: "A SERVICE OF PRAYER, MUSIC & MEDITATION"

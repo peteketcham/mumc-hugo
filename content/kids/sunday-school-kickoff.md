@@ -3,7 +3,7 @@ title: "Sunday School Kickoff"
 weight: 270
 draft: true
 archived: false
-image: "/images/rallyday_sm.jpg"
+image: "/images/rallyday-sm.jpg"
 image_alt: "Sunday School Rally Day"
 ---
 

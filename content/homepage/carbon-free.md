@@ -3,7 +3,7 @@ title: "Carbon Free"
 weight: 280
 draft: false
 archived: false
-image: "/images/CarbonFree-Logo_small.jpg"
+image: "/images/carbonfree-logo-small.jpg"
 image_alt: "Minnehaha United Methodist Church is carbon-free"
 ---
 

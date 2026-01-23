@@ -3,8 +3,8 @@ title: "Welcome"
 weight: 20
 draft: false
 archived: false
-video: "/images/BeckyWelcomeHome.mp4"
-video_ogg: "/images/BeckyWelcomeHome2.ogg"
+video: "/images/becky-welcome-home.mp4"
+video_ogg: "/images/becky-welcome-home-2.ogg"
 video_fallback: "https://www.youtube.com/watch?v=5_AW9mDExZ0"
 link: "https://www.youtube.com/watch?v=5_AW9mDExZ0"
 external: true

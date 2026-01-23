@@ -4,7 +4,7 @@ description: "Call Minnehaha UMC at 612-721-6231 or stop by the church at 3701 E
 layout: "contact"
 subtitle: "Here are some different ways to contact us:"
 office_hours: "10:00 a.m. – 4:00 p.m., Tuesdays & Thursdays"
-staff_photo: "/images/MUMC_Staff_2020-wJean.jpg"
+staff_photo: "/images/mumc-staff-2020-wjean.jpg"
 staff_contacts:
   - name: "Becky Sechrist"
     role: "Pastor"

@@ -3,7 +3,7 @@ title: "Livestreamed Worship"
 weight: 30
 draft: false
 archived: false
-image: "/images/ANOTHER-1-SERVICE-1_sm.jpg"
+image: "/images/another-1-service-1-sm.jpg"
 image_alt: "Sunday Worship at 9:30 a.m. - Join us!"
 ---
 

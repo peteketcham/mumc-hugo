@@ -3,7 +3,7 @@ title: "Planned Giving"
 weight: 200
 draft: false
 archived: false
-image: "/images/Planned Giving Circle.png"
+image: "/images/planned-giving-circle.png"
 image_alt: "Planned Giving at Minnehaha United Methodist Church"
 ---
 

@@ -3,7 +3,7 @@ title: "Christmas Pageant"
 weight: 250
 draft: true
 archived: false
-image: "/images/Click-for-Pageant_11AM.jpg"
+image: "/images/click-for-pageant-11am.jpg"
 image_alt: "Christmas Pageant"
 link: "https://www.youtube.com/watch?v=zUZoYcbfFwE&t=2s"
 external: true

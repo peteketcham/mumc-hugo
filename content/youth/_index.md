@@ -3,7 +3,7 @@ title: "Youth Ministries"
 subtitle: "3701 East 50th Street, Minneapolis, MN 55417 | 612.721.6231 | office@minnehaha.org"
 description: "Minnehaha's youth programs offer teens and tweens great opportunities to know God as we seek, serve and celebrate."
 layout: "section-with-cards"
-banner: "/images/Header-with-Canoe.jpg"
+banner: "/images/header-with-canoe.jpg"
 banner_alt: "Youth canoeing"
 ---
 
