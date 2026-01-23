@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="inner">
+    {{/* Page title */}}
+    <div class="block_general_title_1 w_margin_1">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+        {{ end }}
+    </div>
+
+    {{/* History Slideshow (Swiper.js) */}}
+    {{ with .Params.slides }}
+    <div class="block_slider_type_1 history-slideshow">
+        <div id="history-slider" class="swiper">
+            <div class="swiper-wrapper">
+                {{ range . }}
+                <div class="swiper-slide">
+                    <img src="{{ .image | relURL }}" alt="{{ .alt }}">
+                </div>
+                {{ end }}
+            </div>
+            <!-- Navigation arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('#history-slider', {
+            loop: false,
+            autoplay: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            keyboard: {
+                enabled: true,
+            },
+        });
+    });
+    </script>
+    {{ end }}
+
+    {{/* Any additional content */}}
+    {{ with .Content }}
+    <div class="block_content page-content">
+        {{ . }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}
