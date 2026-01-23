@@ -240,7 +240,7 @@ For content changes only (no code), see [docs/CONTENT-MANAGEMENT.md](docs/CONTEN
    - Added responsive CSS for `.responsiveCal` in `custom.css`
 
 4. **Fixed subdirectory deployment paths**
-   - Site is hosted at `https://www.peteketcham.com/mumc-hugo/`
+   - Site is hosted at `https://www.minnehaha.org`
    - Updated ALL templates to use `| relURL` for paths (images, CSS, JS, links)
    - Files updated:
      - `layouts/_default/baseof.html` - favicon, CSS, JS
@@ -270,7 +270,7 @@ After `git push`:
 
 ```toml
 # hugo.toml
-baseURL = 'https://www.peteketcham.com/mumc-hugo/'
+baseURL = 'https://www.minnehaha.org'
 ```
 
 ### Important Notes

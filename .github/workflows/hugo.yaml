@@ -82,6 +82,7 @@ jobs:
           hugo \
             --gc \
             --minify \
+            --baseURL "https://minnehaha.org" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save

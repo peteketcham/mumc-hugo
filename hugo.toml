@@ -1,5 +1,6 @@
-# baseURL = 'https://minnehaha.org/'
-baseURL = 'https://www.peteketcham.com/mumc-hugo/'
+# Local dev uses '/'; production baseURL set via --baseURL in GitHub Actions
+# Production URLs: https://minnehaha.org/
+baseURL = '/'
 languageCode = 'en-us'
 title = 'Minnehaha United Methodist Church'
 enableRobotsTXT = true

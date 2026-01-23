@@ -60,12 +60,12 @@
         <div class="title">
             {{ if and $hasLink (not $hasImage) (not $hasVideo) }}
                 {{/* Text-only card with link */}}
-                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
+                <a href="{{ if $isExternal }}{{ .Params.link }}{{ else }}{{ .Params.link | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
                     {{ .Content }}
                 </a>
             {{ else if and $hasLink $hasImage }}
                 {{/* Image card - link wraps content too */}}
-                <a href="{{ .Params.link }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
+                <a href="{{ if $isExternal }}{{ .Params.link }}{{ else }}{{ .Params.link | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener" class="external-link"{{ end }}>
                     {{ .Content }}
                 </a>
             {{ else }}
