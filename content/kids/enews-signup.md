@@ -3,7 +3,7 @@ title: "Sign Up for eNews"
 weight: 120
 draft: false
 archived: false
-image: "/images/enewssignup.png"
+image: "/images/enewssignup.jpg"
 image_alt: "Sign up for our eNews"
 link: "mailto:office@minnehaha.org?subject=Add%20me%20to%20the%20eNews%20mailing%20list"
 external: true

@@ -3,7 +3,7 @@ title: "Newsletter Signup"
 weight: 290
 draft: false
 archived: false
-image: "/images/enewssignup.png"
+image: "/images/enewssignup.jpg"
 image_alt: "Subscribe to our e-News newsletter"
 ---
 
