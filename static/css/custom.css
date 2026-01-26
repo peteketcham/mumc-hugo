@@ -1088,6 +1088,6 @@ footer {
 
 @media (max-width: 768px) {
     .responsiveCal iframe {
-        height: 600px;
+        height: 750px;
     }
 }
