@@ -224,17 +224,24 @@
     color: var(--color-accent);
 }
 
-/* Address/title block */
-.block_general_title_1 h3 {
-    display: inline;
+/* Address/title block - styled like h3 for visual consistency */
+.block_general_title_1 .church-address,
+.block_general_title_1 .church-contact {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-.block_general_title_1 h3 a {
+.block_general_title_1 .church-address a,
+.block_general_title_1 .church-contact a {
     color: inherit;
 }
 
-.block_general_title_1 h3 a:hover,
-.block_general_title_1 h3 a:focus {
+.block_general_title_1 .church-address a:hover,
+.block_general_title_1 .church-address a:focus,
+.block_general_title_1 .church-contact a:hover,
+.block_general_title_1 .church-contact a:focus {
     color: var(--color-accent);
 }
 
