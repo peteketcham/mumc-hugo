@@ -7,6 +7,8 @@
   Expected front matter:
   - image: path to image
   - image_alt: alt text for image
+  - image_width: width of image (default: 296)
+  - image_height: height of image (default: 200)
   - video: path to video file
   - video_ogg: optional ogg fallback
   - video_fallback: YouTube fallback URL
@@ -19,6 +21,8 @@
 {{ $hasContent := gt (len .Content) 0 }}
 {{ $hasLink := .Params.link }}
 {{ $isExternal := .Params.external }}
+{{ $imageWidth := .Params.image_width | default 296 }}
+{{ $imageHeight := .Params.image_height | default 200 }}
 
 <article class="post_type_1{{ if not $hasImage }}{{ if not $hasVideo }} post_type_3{{ end }}{{ end }}">
     {{/* Image or Video */}}
@@ -37,12 +41,12 @@
             {{ else if $hasLink }}
                 {{/* Image with link */}}
                 <a href="{{ if .Params.external }}{{ .Params.link }}{{ else }}{{ .Params.link | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
-                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}">
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}" width="{{ $imageWidth }}" height="{{ $imageHeight }}" loading="lazy">
                     <span class="hover"></span>
                 </a>
             {{ else }}
                 {{/* Image without link */}}
-                <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Params.image_alt | default .Title }}" width="{{ $imageWidth }}" height="{{ $imageHeight }}" loading="lazy">
                 <span class="hover"></span>
             {{ end }}
         </div>

@@ -435,12 +435,31 @@ a.external-link::after {
         gap: var(--spacing-xl);
     }
 
-    /* Ensure touch targets are at least 44px */
+    /* Ensure touch targets are at least 44x44px (WCAG 2.1 Level AAA) */
     .block_top_menu nav > ul > li > a,
     .block_secondary_menu nav li a {
         min-height: 44px;
-        display: flex;
+        min-width: 44px;
+        padding: 12px 16px;
+        display: inline-flex;
         align-items: center;
+        justify-content: center;
+    }
+
+    /* Dropdown menu items also need adequate touch targets */
+    .block_top_menu nav > ul > li ul li a {
+        min-height: 44px;
+        padding: 12px 16px;
+        display: block;
+    }
+
+    /* Social icons touch targets */
+    .general_social_1 li a {
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Improve slider nav touch targets on mobile */

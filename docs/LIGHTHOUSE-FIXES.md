@@ -7,6 +7,8 @@ This document tracks remaining performance and accessibility improvements identi
 - [x] **Meta viewport** - Removed `maximum-scale=1` to allow zooming (accessibility)
 - [x] **Image dimensions** - Added width/height attributes to slider images (reduces CLS)
 - [x] **Heading hierarchy** - Changed h3 elements to paragraphs on homepage (accessibility)
+- [x] **Touch targets** - Increased mobile nav padding to min 44x44px (accessibility)
+- [x] **Card image dimensions** - Added width/height attributes to homepage-card.html partial with lazy loading
 
 ## Remaining Fixes (Medium Priority)
 
@@ -22,10 +24,7 @@ This document tracks remaining performance and accessibility improvements identi
 
 ### Accessibility
 
-| Issue | Fix |
-|-------|-----|
-| Touch targets too small | Increase padding on mobile nav items to min 44x44px |
-| Add image dimensions to card images | Update homepage-card.html partial to include width/height |
+All accessibility issues have been addressed (see Completed Fixes above).
 
 ## Implementation Notes
 
