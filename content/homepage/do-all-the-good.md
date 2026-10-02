@@ -1,6 +1,6 @@
 ---
 title: "Do All The Good"
-weight: 140
+weight: 150
 draft: false
 archived: false
 image: "/images/do-all-the-good-u-can-4web.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Planned Giving"
-weight: 200
+weight: 210
 draft: false
 archived: false
 image: "/images/planned-giving-circle.png"

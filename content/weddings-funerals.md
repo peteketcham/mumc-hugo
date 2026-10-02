@@ -19,4 +19,4 @@ banner_alt: "Wedding at Minnehaha UMC"
 
 [Click here](/documents/MemorialPlanningForm_1017.pdf) to download the Memorial/Funeral Planning Form.
 
-[Click here](/documents/UWF_FuneralReceptionService_2025.pdf) to download the Reception Service information.
+[Click here](/documents/UWF_FuneralReceptionService_2026%20CALIBRI.pdf) to download the Reception Service information.

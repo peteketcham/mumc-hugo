@@ -1,6 +1,6 @@
 ---
 title: "Donate"
-weight: 180
+weight: 190
 draft: false
 archived: false
 image: "/images/click2donate.jpg"

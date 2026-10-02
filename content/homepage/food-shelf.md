@@ -1,6 +1,6 @@
 ---
 title: "Food Shelf"
-weight: 120
+weight: 100
 draft: false
 archived: false
 image: "/images/food-shelf-logo.jpg"

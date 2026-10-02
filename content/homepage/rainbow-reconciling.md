@@ -1,6 +1,6 @@
 ---
 title: "Reconciling Congregation"
-weight: 210
+weight: 110
 draft: false
 archived: false
 image: "/images/m-logo-rainbow.png"

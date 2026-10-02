@@ -1,6 +1,6 @@
 ---
 title: "Land Acknowledgement"
-weight: 50
+weight: 40
 draft: false
 archived: false
 image: "/images/land-acknowledgement-image-2025.jpg"

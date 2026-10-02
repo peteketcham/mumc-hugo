@@ -1,6 +1,6 @@
 ---
 title: "Racial Justice"
-weight: 160
+weight: 170
 draft: false
 archived: false
 image: "/images/mumc-racial-justice-logo-w-rj.jpg"

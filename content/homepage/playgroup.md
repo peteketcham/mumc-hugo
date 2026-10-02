@@ -1,6 +1,6 @@
 ---
 title: "Thursday Playgroup"
-weight: 170
+weight: 180
 draft: false
 archived: false
 image: "/images/playgroup-returns-2023.jpg"

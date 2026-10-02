@@ -2,7 +2,7 @@
 title: "Winter Musical"
 weight: 40
 draft: false
-archived: false
+archived: true
 image: "/images/rockin-tale-website-2026.jpg"
 image_alt: "Be part of the church's Winter Musical - all are invited"
 ---

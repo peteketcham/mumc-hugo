@@ -1,6 +1,6 @@
 ---
 title: "First Visit"
-weight: 60
+weight: 80
 draft: false
 archived: false
 image: "/images/yourfirstvisit2.jpg"

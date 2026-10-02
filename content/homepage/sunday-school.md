@@ -1,8 +1,8 @@
 ---
 title: "Sunday School"
-weight: 80
+weight: 160
 draft: false
 archived: false
-image: "/images/sunday-school-2025.jpg"
-image_alt: "Rally day - the new Sunday school year - starts on Sunday, September 7"
+image: "/images/sunday-school-4-all.jpg"
+image_alt: "Sunday School for all ages at 10:45 Sunday mornings"
 ---
